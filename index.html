@@ -27,12 +27,9 @@
 
         /* ===== Navbar ===== */
         nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            /* logo em cima, links abaixo */
             align-items: center;
             padding: 1rem 2rem;
             background: #fff;
@@ -40,16 +37,32 @@
             z-index: 1000;
         }
 
-        nav a {
-            margin: 0 1rem;
+        /* Logo */
+        nav .logo a {
+            font-weight: bold;
+            color: #111;
+            font-size: 1.2rem;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Links da navbar */
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .nav-links a {
             color: #111;
             text-decoration: none;
             font-weight: 600;
             transition: color 0.3s;
         }
 
-        nav a:hover,
-        nav a.active {
+        .nav-links a:hover,
+        .nav-links a.active {
             color: #555;
         }
 
@@ -219,14 +232,6 @@
             header h1 {
                 font-size: 2.2rem;
             }
-
-            nav {
-                flex-direction: column;
-            }
-
-            nav div {
-                margin-top: 1rem;
-            }
         }
     </style>
 </head>
@@ -234,9 +239,9 @@
 <body>
     <!-- Navbar -->
     <nav id="navbar">
-        <div class="logo"><a href="#" style="color:#111;font-weight:bold;">Tiago Dados</a></div>
-        <div>
-            <a href="#sobre" class="active">Sobre</a>
+        <div class="logo"><a href="#">Tiago Dados</a></div>
+        <div class="nav-links">
+            <a href="#sobre">Sobre</a>
             <a href="#solucoes">Soluções</a>
             <a href="#portfolio">Portfólio</a>
             <a href="#contato">Contato</a>
@@ -320,7 +325,7 @@
     </footer>
 
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/5511999999999" class="whatsapp-btn" target="_blank">
+    <a href="https://wa.me/5511971338107" class="whatsapp-btn" target="_blank">
         <img src="https://raw.githubusercontent.com/tiagocodeclean/site-tiago/91f7ec890e79d45238cd6b937c6f975c01217054/whatsapp.png"
             alt="WhatsApp">
     </a>
