@@ -29,6 +29,7 @@
         nav {
             display: flex;
             flex-direction: column;
+            /* logo em cima, links abaixo */
             align-items: center;
             padding: 1rem 2rem;
             background: #fff;
@@ -36,6 +37,7 @@
             z-index: 1000;
         }
 
+        /* Logo */
         nav .logo a {
             font-weight: bold;
             color: #111;
@@ -44,6 +46,7 @@
             margin-bottom: 0.5rem;
         }
 
+        /* Links da navbar */
         .nav-links {
             display: flex;
             justify-content: center;
@@ -63,22 +66,19 @@
             color: #555;
         }
 
-        /* ===== Hero com banner compacto ===== */
+        /* ===== Hero com banner ===== */
         header {
-            min-height: 75vh;
-            /* altura reduzida para menos espaço */
-            background-image: url('https://raw.githubusercontent.com/tiagocodeclean/site-tiago/main/banner.png');
+            min-height: 100vh;
+            background-image: url('https://raw.githubusercontent.com/tiagocodeclean/site-tiago/25d94feae3ce8e454e6b6876ce169496556733f3/Design%20sem%20nome%20(1).png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            /* centraliza verticalmente */
             align-items: center;
             text-align: center;
-            padding: 0.5rem 2rem;
-            /* menos espaço superior e inferior */
+            padding: 2rem;
             color: #fff;
         }
 
@@ -200,7 +200,7 @@
             color: #555;
         }
 
-        /* ===== WhatsApp flutuante ===== */
+        /* ===== WhatsApp flutuante com imagem ===== */
         .whatsapp-btn {
             position: fixed;
             bottom: 30px;
@@ -227,6 +227,7 @@
             transform: scale(1.1);
         }
 
+        /* ===== Responsividade ===== */
         @media(max-width:768px) {
             header h1 {
                 font-size: 2.2rem;
@@ -324,7 +325,7 @@
     </footer>
 
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/5511999999999" class="whatsapp-btn" target="_blank">
+    <a href="https://wa.me/5511971338107" class="whatsapp-btn" target="_blank">
         <img src="https://raw.githubusercontent.com/tiagocodeclean/site-tiago/91f7ec890e79d45238cd6b937c6f975c01217054/whatsapp.png"
             alt="WhatsApp">
     </a>
