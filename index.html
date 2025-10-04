@@ -28,7 +28,6 @@
         nav {
             display: flex;
             justify-content: space-between;
-            /* logo à esquerda, links à direita */
             align-items: center;
             padding: 1rem 2rem;
             background: #fff;
@@ -117,6 +116,13 @@
             margin: auto;
         }
 
+        #solucoes,
+        #portfolio,
+        #contato {
+            padding-top: 3rem;
+            padding-bottom: 5rem;
+        }
+
         h2 {
             text-align: center;
             margin-bottom: 2rem;
@@ -139,10 +145,16 @@
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
 
-        .portfolio img {
-            width: 100%;
-            border-radius: 10px;
-            margin-top: 1rem;
+        /* Portfólio / Soluções com check preto */
+        .card p {
+            margin-bottom: 1rem;
+        }
+
+        .check {
+            color: #000;
+            /* preto */
+            font-weight: bold;
+            margin-right: 0.5rem;
         }
 
         /* Formulário */
@@ -280,35 +292,28 @@
     <!-- Soluções -->
     <section id="solucoes">
         <h2>Soluções</h2>
-        <div class="card">✔ Dashboards em Power BI – Relatórios interativos para vendas, financeiro e estoque.</div>
-        <div class="card">✔ Consultoria em SQL – Criação e otimização de bancos de dados.</div>
-        <div class="card">✔ ETL & Automação – Integração de dados de planilhas, sistemas e APIs.</div>
-        <div class="card">✔ Treinamento – Capacitação prática em Power BI e SQL.</div>
+        <div class="card">
+            <p><span class="check">✔</span>Dashboards em Power BI – Relatórios interativos para vendas, financeiro e
+                estoque.</p>
+            <p><span class="check">✔</span>Consultoria em SQL – Criação e otimização de bancos de dados.</p>
+            <p><span class="check">✔</span>ETL & Automação – Integração de dados de planilhas, sistemas e APIs.</p>
+            <p><span class="check">✔</span>Treinamento – Capacitação prática em Power BI e SQL.</p>
+        </div>
     </section>
 
     <!-- Portfólio -->
     <section id="portfolio" class="portfolio">
         <h2>Portfólio</h2>
         <div class="card">
-            <p><strong>Dashboard de Vendas</strong> – De planilhas confusas para relatórios interativos no Power BI.</p>
-            <img src="https://via.placeholder.com/800x400.png?text=Dashboard+de+Vendas" alt="Dashboard de Vendas">
-        </div>
-        <div class="card">
-            <p><strong>Otimização SQL</strong> – Query de 20s para 2s após modelagem e índices.</p>
-            <img src="https://via.placeholder.com/800x400.png?text=Otimização+SQL" alt="Otimização SQL">
-        </div>
-        <div class="card">
-            <p><strong>Dashboard Financeiro</strong> – Acompanhamento de receitas, despesas e margens de lucro.</p>
-            <img src="https://via.placeholder.com/800x400.png?text=Dashboard+Financeiro" alt="Dashboard Financeiro">
-        </div>
-        <div class="card">
-            <p><strong>Gestão de Estoque</strong> – Painel interativo para monitorar entradas e saídas de produtos.</p>
-            <img src="https://via.placeholder.com/800x400.png?text=Gestão+de+Estoque" alt="Gestão de Estoque">
-        </div>
-        <div class="card">
-            <p><strong>Automação ETL</strong> – Extração e carga automática de dados de planilhas e sistemas externos.
-            </p>
-            <img src="https://via.placeholder.com/800x400.png?text=Automação+ETL" alt="Automação ETL">
+            <p><span class="check">✔</span>Dashboard de Vendas – De planilhas confusas para relatórios interativos no
+                Power BI.</p>
+            <p><span class="check">✔</span>Otimização SQL – Query de 20s para 2s após modelagem e índices.</p>
+            <p><span class="check">✔</span>Dashboard Financeiro – Acompanhamento de receitas, despesas e margens de
+                lucro.</p>
+            <p><span class="check">✔</span>Gestão de Estoque – Painel interativo para monitorar entradas e saídas de
+                produtos.</p>
+            <p><span class="check">✔</span>Automação ETL – Extração e carga automática de dados de planilhas e sistemas
+                externos.</p>
         </div>
     </section>
 
