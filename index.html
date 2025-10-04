@@ -7,7 +7,6 @@
     <title>Portfólio de Dados - Tiago</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap" rel="stylesheet">
     <style>
-        /* ===== Reset ===== */
         * {
             margin: 0;
             padding: 0;
@@ -25,33 +24,30 @@
             line-height: 1.6;
         }
 
-        /* ===== Navbar ===== */
+        /* Navbar */
         nav {
             display: flex;
-            flex-direction: column;
-            /* logo em cima, links abaixo */
+            justify-content: space-between;
+            /* logo à esquerda, links à direita */
             align-items: center;
             padding: 1rem 2rem;
             background: #fff;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-            z-index: 1000;
+            flex-wrap: wrap;
         }
 
-        /* Logo */
         nav .logo a {
             font-weight: bold;
             color: #111;
             font-size: 1.2rem;
             text-decoration: none;
-            margin-bottom: 0.5rem;
         }
 
-        /* Links da navbar */
         .nav-links {
             display: flex;
-            justify-content: center;
+            justify-content: flex-end;
+            gap: 1.5rem;
             flex-wrap: wrap;
-            gap: 1rem;
         }
 
         .nav-links a {
@@ -66,34 +62,33 @@
             color: #555;
         }
 
-        /* ===== Hero com banner ===== */
+        /* Header */
         header {
-            min-height: 100vh;
-            background-image: url('https://raw.githubusercontent.com/tiagocodeclean/site-tiago/25d94feae3ce8e454e6b6876ce169496556733f3/Design%20sem%20nome%20(1).png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            background-color: #000;
+            color: #fff;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            text-align: center;
+            flex-direction: column;
             padding: 2rem;
-            color: #fff;
+            min-height: 50vh;
+            text-align: center;
+        }
+
+        header .header-content {
+            max-width: 650px;
+            text-align: left;
         }
 
         header h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            white-space: nowrap;
         }
 
         header p {
-            font-size: 1.2rem;
-            max-width: 650px;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+            font-size: 1.1rem;
+            margin-bottom: 1.2rem;
         }
 
         .btn {
@@ -115,7 +110,7 @@
             transform: scale(1.05);
         }
 
-        /* ===== Sections ===== */
+        /* Sections */
         section {
             padding: 5rem 2rem;
             max-width: 1100px;
@@ -150,7 +145,7 @@
             margin-top: 1rem;
         }
 
-        /* ===== Formulário ===== */
+        /* Formulário */
         form {
             display: flex;
             flex-direction: column;
@@ -181,7 +176,7 @@
             background: #333;
         }
 
-        /* ===== Footer ===== */
+        /* Footer */
         footer {
             text-align: center;
             padding: 2rem;
@@ -200,7 +195,7 @@
             color: #555;
         }
 
-        /* ===== WhatsApp flutuante com imagem ===== */
+        /* WhatsApp flutuante */
         .whatsapp-btn {
             position: fixed;
             bottom: 30px;
@@ -227,33 +222,50 @@
             transform: scale(1.1);
         }
 
-        /* ===== Responsividade ===== */
+        /* Responsividade */
         @media(max-width:768px) {
             header h1 {
-                font-size: 2.2rem;
+                font-size: 1.8rem;
+                white-space: normal;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-links {
+                justify-content: center;
+                gap: 1rem;
+                margin-top: 0.5rem;
             }
         }
     </style>
 </head>
 
 <body>
+
     <!-- Navbar -->
     <nav id="navbar">
         <div class="logo"><a href="#">Tiago Dados</a></div>
         <div class="nav-links">
-            <a href="#sobre">Sobre</a>
+            <a href="#sobre">Quem Sou</a>
             <a href="#solucoes">Soluções</a>
             <a href="#portfolio">Portfólio</a>
             <a href="#contato">Contato</a>
         </div>
     </nav>
 
-    <!-- Hero -->
+    <!-- Header -->
     <header>
-        <h1>Tiago | Soluções em Dados</h1>
-        <p>Transformo dados em decisões inteligentes com SQL, Power BI e Bancos de Dados.<br>
-            Dashboards modernos, consultoria e automação para empresas.</p>
-        <a href="#contato" class="btn">Entre em Contato</a>
+        <div class="header-content">
+            <h1>Tiago | Soluções em Dados</h1>
+            <p>
+                Transformo dados em decisões inteligentes com SQL, Power BI e Bancos de Dados.<br>
+                Dashboards modernos, consultoria e automação para empresas.
+            </p>
+            <a href="#contato" class="btn">Entre em Contato</a>
+        </div>
     </header>
 
     <!-- Sobre -->
@@ -317,15 +329,15 @@
     <footer>
         <p>© 2025 Tiago Dados</p>
         <p>
-            <a href="#sobre">Sobre</a>|
+            <a href="#sobre">Quem Sou</a>|
             <a href="#solucoes">Soluções</a>|
             <a href="#portfolio">Portfólio</a>|
             <a href="#contato">Contato</a>
         </p>
     </footer>
 
-    <!-- WhatsApp Button -->
-    <a href="https://wa.me/5511971338107" class="whatsapp-btn" target="_blank">
+    <!-- WhatsApp -->
+    <a href="https://wa.me/5511999999999" class="whatsapp-btn" target="_blank">
         <img src="https://raw.githubusercontent.com/tiagocodeclean/site-tiago/91f7ec890e79d45238cd6b937c6f975c01217054/whatsapp.png"
             alt="WhatsApp">
     </a>
